@@ -48,7 +48,7 @@ def save_converted_coords(ind_start, ind_end, file_ind_start):
 
                 print(ind)
 
-                if ind % 1 == 0:
+                if ind % 1000 == 0:
                     with open(f'fields/{str(file_ind).zfill(3)}.pkl', 'wb') as f:
                         pickle.dump(fields, f)
                     fields = list()
