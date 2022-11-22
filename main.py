@@ -62,13 +62,10 @@ def save_converted_coords(ind_start, ind_end, file_ind_start):
 
 
 if __name__ == "__main__":
-    t1 = threading.Thread(target=save_converted_coords, args=(82000,85000, 82))
-    t2 = threading.Thread(target=save_converted_coords, args=(93000,95000, 93))
-    t3 = threading.Thread(target=save_converted_coords, args=(114000,117000, 114))
-    # t1 = threading.Thread(target=save_converted_coords, args=(132000, 142000, 132))
-    # t2 = threading.Thread(target=save_converted_coords, args=(143000,153000, 143))
-    # t3 = threading.Thread(target=save_converted_coords, args=(154000,164000, 154))
-    t4 = threading.Thread(target=save_converted_coords, args=(143000,160000, 143))
+    t1 = threading.Thread(target=save_converted_coords, args=(160000,360000, 160))
+    t2 = threading.Thread(target=save_converted_coords, args=(360000,560000, 360))
+    t3 = threading.Thread(target=save_converted_coords, args=(560000,760000, 560))
+    t4 = threading.Thread(target=save_converted_coords, args=(760000,960000, 760))
 
     t1.start()
     t2.start()
