@@ -49,7 +49,7 @@ def save_converted_coords(ind_start, ind_end, file_ind_start):
                 print(ind)
 
                 if ind % 1000 == 0:
-                    with open(f'fields/{str(file_ind).zfill(3)}.pkl', 'wb') as f:
+                    with open(f'fields/{str(file_ind).zfill(4)}.pkl', 'wb') as f:
                         pickle.dump(fields, f)
                     fields = list()
                     file_ind += 1
@@ -62,10 +62,10 @@ def save_converted_coords(ind_start, ind_end, file_ind_start):
 
 
 if __name__ == "__main__":
-    t1 = threading.Thread(target=save_converted_coords, args=(160000,360000, 160))
-    t2 = threading.Thread(target=save_converted_coords, args=(360000,560000, 360))
-    t3 = threading.Thread(target=save_converted_coords, args=(560000,760000, 560))
-    t4 = threading.Thread(target=save_converted_coords, args=(760000,960000, 760))
+    t1 = threading.Thread(target=save_converted_coords, args=(960000,1060000, 960))
+    t2 = threading.Thread(target=save_converted_coords, args=(1060000,1260000, 1060))
+    t3 = threading.Thread(target=save_converted_coords, args=(1260000,1460000, 1260))
+    t4 = threading.Thread(target=save_converted_coords, args=(1460000,1660000, 1460))
 
     t1.start()
     t2.start()
